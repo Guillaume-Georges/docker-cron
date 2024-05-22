@@ -1,4 +1,4 @@
-# Example of a cron job to run the SQL script at midnight every day using environment variables for database connection details
+# Runs the SQL script at midnight every day using environment variables for database connection details
 0 0 * * * mysql -u $DB_USER -p$DB_PASSWORD -h $DB_HOST -P $DB_PORT $DB_NAME < /refresh_materialized_table.sql >> /var/log/cron.log 2>&1
 
-# An empty line is required at the end of this file for a valid cron file.
+# Ensure an empty line at the end of this file for a valid cron file.
